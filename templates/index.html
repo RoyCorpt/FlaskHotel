@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel App</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Manajemen Hotel</h1>
+
+        <div class="card">
+            <h2>Tambah Tamu ke Antrian</h2>
+            <form action="/tambah" method="post">
+                <input name="name" placeholder="Nama tamu" required>
+                <button type="submit">Tambah</button>
+            </form>
+        </div>
+
+        <div class="card">
+            <h2>Check-out</h2>
+            <form action="/checkout" method="post">
+                <input name="room" placeholder="Nomor kamar (misal 101)" required>
+                <button type="submit">Check-out</button>
+            </form>
+        </div>
+
+        <div class="card">
+            <h2>Batalkan Check-in</h2>
+            <form action="/batal" method="post">
+                <input name="room" placeholder="Nomor kamar yang dibatalkan (misal 102)" required>
+                <button type="submit">Batalkan</button>
+            </form>
+        </div>
+
+        <div class="nav-links">
+            <a href="/checkin">Proses Check-in</a>
+            <a href="/status">Lihat Status Kamar & Tamu</a>
+            <a href="/antrian">Lihat Antrian</a>
+        </div>
+    </div>
+</body>
+</html>

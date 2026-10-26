@@ -1,0 +1,151 @@
+/* === RESET DASAR === */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #f0f4f8;
+  color: #333;
+  line-height: 1.6;
+  padding: 20px;
+}
+
+/* === CONTAINER UTAMA === */
+.container {
+  max-width: 900px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* === HEADER UTAMA === */
+h1 {
+  text-align: center;
+  color: #0a3d62;
+  font-size: 32px;
+  font-weight: 600;
+  margin-bottom: 40px;
+}
+
+/* === CARD WRAPPER === */
+.card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 28px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  margin-bottom: 30px;
+}
+
+/* === SUBHEADINGS === */
+.card h2 {
+  color: #0a3d62;
+  margin-bottom: 20px;
+  font-size: 20px;
+  border-bottom: 2px solid #e0e7f0;
+  padding-bottom: 8px;
+}
+
+/* === DAFTAR TAMU === */
+ul.guest-list {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 10px;
+}
+
+ul.guest-list li {
+  padding: 10px 16px;
+  margin-bottom: 10px;
+  background-color: #f8f9fb;
+  border-left: 4px solid #3498db;
+  border-radius: 6px;
+  font-size: 15.5px;
+  color: #2c3e50;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+}
+
+/* === TOMBOL DANGER (hapus semua) === */
+button.danger {
+  background-color: #e74c3c;
+  color: white;
+  padding: 12px;
+  font-size: 15px;
+  font-weight: 500;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.2s ease;
+  width: 100%;
+  margin-top: 10px;
+}
+
+button.danger:hover {
+  background-color: #c0392b;
+  box-shadow: 0 4px 12px rgba(231, 76, 60, 0.3);
+}
+
+/* === LINK NAVIGASI BAWAH === */
+.link-group {
+  text-align: center;
+  margin-top: 30px;
+}
+
+a.button {
+  background-color: #0a3d62;
+  color: #fff;
+  padding: 10px 18px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 500;
+  display: inline-block;
+  transition: background-color 0.3s ease, box-shadow 0.2s ease;
+}
+
+a.button:hover {
+  background-color: #145da0;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+.room-box-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 20px;
+}
+
+.room-box {
+  background-color: #fff;
+  border: 2px solid #ddd;
+  border-left: 6px solid #004080;
+  border-radius: 10px;
+  padding: 16px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.room-box.kosong {
+  border-left-color: #27ae60;
+  background-color: #f1fbf5;
+}
+
+.room-box.terisi {
+  border-left-color: #e74c3c;
+  background-color: #fff3f3;
+}
+
+.room-box-number {
+  font-size: 20px;
+  font-weight: 600;
+  color: #003366;
+  margin-bottom: 6px;
+}
+
+.room-box-status {
+  font-size: 14px;
+  font-weight: 500;
+  color: #666;
+}

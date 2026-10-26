@@ -1,0 +1,80 @@
+/* === RESET DASAR === */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #f0f4f8;
+  color: #333;
+  padding: 20px;
+}
+
+/* === CONTAINER UTAMA === */
+.container {
+  max-width: 700px;
+  margin: 60px auto;
+  padding: 40px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+}
+
+/* === JUDUL === */
+h2 {
+  font-size: 26px;
+  color: #0a3d62;
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+/* === DAFTAR ANTRIAN === */
+ul.guest-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+ul.guest-list li {
+  background-color: #f8f9fb;
+  padding: 14px 20px;
+  margin-bottom: 12px;
+  border-left: 4px solid #3498db;
+  border-radius: 6px;
+  font-size: 15.5px;
+  color: #2c3e50;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+}
+
+/* === JIKA ANTRIAN KOSONG === */
+.empty-msg {
+  text-align: center;
+  font-style: italic;
+  font-size: 15px;
+  color: #888;
+  margin-bottom: 20px;
+}
+
+/* === TOMBOL KEMBALI === */
+.link-group {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.link-group a {
+  background-color: #0a3d62;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 10px 18px;
+  border-radius: 6px;
+  display: inline-block;
+  transition: background-color 0.3s ease, box-shadow 0.2s ease;
+}
+
+.link-group a:hover {
+  background-color: #145da0;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}

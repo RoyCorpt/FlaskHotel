@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Check-in Berhasil</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='checkin.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h2>Check-in Berhasil</h2>
+        <p class="checkin-msg">
+            Tamu <strong>{{ guest }}</strong> berhasil check-in ke kamar <strong>{{ room }}</strong>.
+        </p>
+
+        <div class="link-group">
+            <a href="/">Kembali ke Beranda</a>
+            <a href="/status">Lihat Status Kamar</a>
+        </div>
+    </div>
+</body>
+</html>

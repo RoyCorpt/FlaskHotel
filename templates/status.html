@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Status Kamar & Tamu</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style-status.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Status Kamar & Tamu</h1>
+
+    <div class="card">
+        <h2>Status Kamar</h2>
+        <div class="room-box-grid">
+            {% for room, status in rooms %}
+            <div class="room-box {% if 'Kosong' in status %}kosong{% else %}terisi{% endif %}">
+                <div class="room-box-number">{{ room }}</div>
+                <div class="room-box-status">{{ status }}</div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
+
+        <div class="card">
+            <h2>Daftar Tamu</h2>
+            <ul class="guest-list">
+                {% for name, room in guests %}
+                <li><strong>{{ name }}</strong> - Kamar {{ room }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+
+        <div class="card">
+            <form action="/hapus_semua" method="post" onsubmit="return confirm('Yakin ingin menghapus semua data tamu?');">
+                <button type="submit" class="danger">Hapus Semua Data Tamu</button>
+            </form>
+        </div>
+
+        <div class="link-group">
+            <a href="/" class="button">Kembali ke Beranda</a>
+        </div>
+    </div>
+</body>
+</html>
